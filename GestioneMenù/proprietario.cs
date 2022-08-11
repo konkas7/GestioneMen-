@@ -16,5 +16,10 @@ namespace GestioneMenù
         {
             InitializeComponent();
         }
+
+        private void proprietario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

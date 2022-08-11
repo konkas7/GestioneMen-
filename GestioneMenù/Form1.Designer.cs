@@ -55,12 +55,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(457, 297);
+            this.button1.Location = new System.Drawing.Point(406, 273);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "ENTER";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -98,19 +99,20 @@
             this.comboBox1.Font = new System.Drawing.Font("Rockwell Nova Cond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "PROPRIETARIO",
-            "UTENTE"});
+            "Proprietario",
+            "Utente"});
             this.comboBox1.Location = new System.Drawing.Point(356, 108);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(219, 39);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.Text = "Scelta ruolo";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell Nova", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(486, 344);
+            this.label4.Location = new System.Drawing.Point(433, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 27);
             this.label4.TabIndex = 9;
