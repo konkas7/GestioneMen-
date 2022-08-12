@@ -21,5 +21,15 @@ namespace GestioneMenù
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

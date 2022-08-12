@@ -16,7 +16,7 @@ namespace GestioneMenù
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new caricamento());
+            Application.Run(new proprietario());
         }
     }
 }
