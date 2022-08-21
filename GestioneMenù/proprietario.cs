@@ -60,6 +60,8 @@ namespace GestioneMenù
             }
         }
 
+
+
         private void label5_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -72,7 +74,15 @@ namespace GestioneMenù
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //File.WriteAllText(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt", textBox1.Text);
+            //Use StreamWriter class.
+            StreamWriter sw = new StreamWriter(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt",true);
 
+            //Use write method to write the text
+            sw.WriteLine(textBox1.Text + "/" + textBox2.Text + "/" + textBox4.Text + "/" + textBox3.Text + "/" + comboBox3.Text);
+
+            //always close your stream
+            sw.Close();
         }
 
         
@@ -85,6 +95,11 @@ namespace GestioneMenù
         private void button4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
