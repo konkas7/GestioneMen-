@@ -41,7 +41,12 @@ namespace GestioneMenù
             dataGridView1.Columns[3].Width = 250;
             dataGridView1.Columns[4].Width = 120;
 
+            read(table);
+            
+        }
 
+        static void read(DataTable table)
+        {
             string[] lines = File.ReadAllLines(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt");
             string[] values;
 
@@ -60,8 +65,6 @@ namespace GestioneMenù
             }
         }
 
-
-
         private void label5_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -79,10 +82,12 @@ namespace GestioneMenù
             StreamWriter sw = new StreamWriter(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt",true);
 
             //Use write method to write the text
-            sw.WriteLine(textBox1.Text + "/" + textBox2.Text + "/" + textBox4.Text + "/" + textBox3.Text + "/" + comboBox3.Text);
+            sw.WriteLine(textBox1.Text + " / " + textBox2.Text + " / " + textBox4.Text + " / " + textBox3.Text + " / " + comboBox3.Text);
 
             //always close your stream
             sw.Close();
+
+            read(table);
         }
 
         
