@@ -41,14 +41,15 @@ namespace GestioneMenù
             dataGridView1.Columns[3].Width = 250;
             dataGridView1.Columns[4].Width = 120;
 
-            read(table);
+            read(table, values);
             
         }
-
-        static void read(DataTable table)
+        string[] values;
+        static void read(DataTable table, string[] values)
         {
+            table.Clear();
             string[] lines = File.ReadAllLines(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt");
-            string[] values;
+            
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -87,7 +88,13 @@ namespace GestioneMenù
             //always close your stream
             sw.Close();
 
-            read(table);
+            read(table, values);
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            comboBox3.ResetText();
         }
 
         
@@ -106,5 +113,44 @@ namespace GestioneMenù
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string comparazione = (values[0]);
+            string testo = textBox1.Text;
+
+            foreach (DataRow dr in table.Rows) // search whole table
+            {
+                if (values[0].ToString() = testo) // if id==2
+                {
+                    dr["Nome"] = textBox2.Text; //change the name
+                    dr["Prezzo (€)"] = textBox4.Text;
+                    dr["Ingredienti"] = textBox3.Text;
+                    dr["Categoria"] = comboBox3.Text;
+                    
+
+
+
+
+
+                    //break; break or not depending on you
+                }
+            }
+
+
+            
+        }
+        /*static void modifica()     //lettura solo se faccio una struct
+        {
+            StreamReader lettura = new StreamReader(@"C:\Users\Thoma\OneDrive\Desktop\GestioneMenù\GestioneMenù\bin\Debug\Piatti.txt");
+            string a; int i = 0;
+            while (!lettura.EndOfStream)
+            {
+                a = lettura.ReadLine();
+                var b = a.Split('/');
+
+            }
+        
+        }*/
     }
 }
